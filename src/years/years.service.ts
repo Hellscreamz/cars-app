@@ -1,5 +1,3 @@
-// years/years.service.ts
-
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import axios from 'axios';

@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
-import { ConfigService } from '@nestjs/config'; // Import the ConfigService
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class TokenService {
-  constructor(private configService: ConfigService) {} // Inject the ConfigService
+  constructor(private configService: ConfigService) {}
 
   async fetchJwtToken(): Promise<string> {
     const apiJWTUrl = this.configService.get<string>('API_URL_JWT');

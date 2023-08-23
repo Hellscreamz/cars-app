@@ -1,5 +1,3 @@
-// graphql/graphql.module.ts
-
 import { Module } from '@nestjs/common';
 import { TokenService } from './jwt.service';
 
