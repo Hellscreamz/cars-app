@@ -9,6 +9,7 @@
 - [Getting Started](#getting-started)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 
 ## Introduction
 
