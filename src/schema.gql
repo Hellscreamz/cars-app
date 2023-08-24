@@ -3,5 +3,15 @@
 # ------------------------------------------------------
 
 type Query {
-  getYears: [String!]!
+  getYears(input: YearsType): [String!]!
+}
+
+input YearsType {
+  year: String
+  make: String
+  model: String
+  trim: String
+  make_model_id: String
+  make_id: String
+  json: String
 }
