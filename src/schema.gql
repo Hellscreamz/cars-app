@@ -2,8 +2,52 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type MakeType {
+  id: Float!
+  name: String!
+}
+
+type MakeModelType {
+  id: Float!
+  make_id: Float!
+  name: String!
+  make: MakeType!
+}
+
+type TrimType {
+  id: Float!
+  make_model_id: Float!
+  year: Float!
+  name: String!
+  description: String!
+  msrp: Float!
+  invoice: Float!
+  created: String!
+  modified: String!
+  make_model: MakeModelType!
+}
+
+type SpecsType {
+  body_class: String!
+  drive_type: String!
+  engine_model: String!
+  fuel_type_primary: String!
+  manufacturer_name: String!
+  steering_location: String!
+  transmission_speeds: String!
+  transmission_style: String!
+  vehicle_type: String!
+}
+
+type VinType {
+  vin: String!
+  trims: [TrimType!]!
+  specs: SpecsType!
+}
+
 type Query {
   getYears(input: YearsType): [String!]!
+  getVinDetails(input: VinInput!): VinType!
 }
 
 input YearsType {
@@ -14,4 +58,8 @@ input YearsType {
   make_model_id: String
   make_id: String
   json: String
+}
+
+input VinInput {
+  vin: String!
 }
