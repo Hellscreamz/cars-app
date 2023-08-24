@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Observable } from 'rxjs';
-import { TokenService } from 'src/api/token/jwt.service';
+import { TokenService } from '../api/token/jwt.service';
 
 @Injectable()
 export class AuthInterceptor implements NestInterceptor {

@@ -4,7 +4,7 @@ import { join } from 'path';
 import { ConfigModule } from '../config/config.module';
 import { JWTModule } from '../api/token/jwt.module';
 import { YearsModule } from '../years/years.module';
-import { VINDecoderModule } from 'src/vin-decoder/vin-decoder.module';
+import { VINDecoderModule } from '../vin-decoder/vin-decoder.module';
 
 export const SharedModuleImports = [
   GraphQLModule.forRoot<ApolloDriverConfig>({
