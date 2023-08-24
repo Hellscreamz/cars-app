@@ -34,7 +34,7 @@ export class AuthInterceptor implements NestInterceptor {
     if (request && !request.headers['Authorization']) {
       request.headers['Authorization'] = `Bearer ${this.token}`;
     }
-    console.log(request.headers);
+
     return next.handle();
   }
 }
