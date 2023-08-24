@@ -67,7 +67,7 @@ describe('VINService', () => {
         },
       };
 
-      const axiosGetMock = jest.spyOn(axios, 'get'); // Mock axios.get method
+      const axiosGetMock = jest.spyOn(axios, 'get');
       axiosGetMock.mockResolvedValue(mockApiResponse);
 
       (configService.get as jest.Mock).mockReturnValue('http://mock-api-url');
@@ -79,7 +79,7 @@ describe('VINService', () => {
     });
 
     it('should throw an error if fetching VIN details fails', async () => {
-      const axiosGetMock = jest.spyOn(axios, 'get'); // Mock axios.get method
+      const axiosGetMock = jest.spyOn(axios, 'get');
       axiosGetMock.mockRejectedValue(new Error('Network error'));
 
       try {
